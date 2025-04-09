@@ -1,20 +1,34 @@
 import React, { ReactElement, SVGProps } from "react";
+import { Flex } from "../Box/box.styles";
+import { BreadCrumbsWrap } from "./breadCrumbs.styles";
 
 interface BreadcrumbItem {
   label: string;
   icon?: ReactElement<SVGProps<SVGSVGElement>>;
-  id: number;
 }
 
 interface BreadcrumbsProps {
-  breadcrumbs?: BreadcrumbItem[];
+  breadcrumbs: BreadcrumbItem[];
   activeIndex?: number;
 }
 
-const ProgressBar: React.FC<BreadcrumbsProps> = ({
+const BreadCrumbs: React.FC<BreadcrumbsProps> = ({
   breadcrumbs,
   activeIndex,
 }) => {
-  return <div>hi</div>;
+  return (
+    <BreadCrumbsWrap>
+      {breadcrumbs.map((item, idx) => (
+        <p
+          key={idx}
+          className={`breadcrumbs__item  ${
+            activeIndex === idx && "breadcrumbs__item__active"
+          }`}
+        >
+          {item.icon} {item.label}
+        </p>
+      ))}
+    </BreadCrumbsWrap>
+  );
 };
-export default ProgressBar;
+export default BreadCrumbs;

@@ -32,7 +32,7 @@ export const Flex = styled.div<FlexProps>`
   background: ${({ background = "" }) => background};
   border: ${({ border = "" }) => border};
   opacity: ${({ opacity = "1" }) => opacity};
-  gap: ${({ gap = "0" }) => gap};
+  gap: ${({ gap = "1rem" }) => gap};
 `;
 
 interface GridProps {
