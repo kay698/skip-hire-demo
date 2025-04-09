@@ -25,7 +25,7 @@ const BreadCrumbs = ({ breadcrumbs, activeIndex }: BreadcrumbsProps) => {
         const Icon = item.icon as React.ComponentType<{ className?: string }>;
 
         return (
-          <>
+          <React.Fragment key={idx}>
             <Flex
               key={idx}
               className={`breadcrumb-item ${
@@ -42,7 +42,7 @@ const BreadCrumbs = ({ breadcrumbs, activeIndex }: BreadcrumbsProps) => {
               <span className="breadcrumb-label">{item.label}</span>
             </Flex>
             {idx < breadcrumbs.length - 1 && "/"}
-          </>
+          </React.Fragment>
         );
       })}
     </BreadCrumbsWrap>

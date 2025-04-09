@@ -43,7 +43,8 @@ interface GridProps {
 
 export const Grid = styled.div<GridProps>`
   display: grid;
+  width: 100%;
   grid-template-columns: ${({ gridCol = "1fr" }) => gridCol};
-  grid-template-rows: ${({ gridRow = "auto" }) => gridRow};
-  grid-gap: ${({ gap = "10px" }) => gap};
+  grid-template-rows: ${({ gridRow = "auto auto auto auto" }) => gridRow};
+  grid-gap: ${({ gap = "1rem" }) => gap};
 `;
