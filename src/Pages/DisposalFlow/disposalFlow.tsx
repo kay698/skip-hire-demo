@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DisposalFlowWrap } from "./disposalFlow.styles";
 import BreadCrumbs from "../../Components/BreadCrumbs/breadCrumbs";
 import { FaLocationDot } from "react-icons/fa6";
@@ -21,7 +21,7 @@ const DisposalFlow = () => {
   ];
 
   return (
-    <DisposalFlowWrap>
+    <DisposalFlowWrap className="">
       <BreadCrumbs breadcrumbs={breadCrumbsList} activeIndex={activeIndex} />
       <SkipSelectScreen />
     </DisposalFlowWrap>

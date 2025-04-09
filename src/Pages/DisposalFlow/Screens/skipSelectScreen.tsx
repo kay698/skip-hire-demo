@@ -5,6 +5,7 @@ import { Loader } from "../../../Components/Loader/loader";
 import SkipSelectCard from "../../../Components/SkipSelectCard/skipSelectCard";
 import ProceedPopup from "../../../Components/ProceedPopUp/proceedPopUp";
 import NoDataImage from "../../../assets/nodata.svg";
+import { animateBody, animateHeaders } from "../../../utils/animations";
 
 interface SkipSelectCardItem {
   allowed_on_road?: boolean;
@@ -33,6 +34,14 @@ const SkipSelectScreen = () => {
     getSkipData();
   }, []);
 
+  useEffect(() => {
+    animateHeaders();
+  }, []);
+
+  useEffect(() => {
+    animateBody();
+  }, [isLoading]);
+
   const getSkipData = async () => {
     setIsLoading(true);
     try {
@@ -49,10 +58,11 @@ const SkipSelectScreen = () => {
     <Flex
       margin={isCardSelected.id ? "0 0 5rem 0" : "0"}
       mobileMargin={isCardSelected.id ? "0 0 8rem 0" : "0"}
+      id="skip-select-wrap"
     >
       <Flex className="disposal-flow-header">
-        <h1 className="header-text">Choose Your Skip Size</h1>
-        <p className="sub-header-text">
+        <h1 className="header-text fadein-header">Choose Your Skip Size</h1>
+        <p className="sub-header-text fadein-subheader">
           Select the skip size that best suits your needs
         </p>
       </Flex>
@@ -70,7 +80,7 @@ const SkipSelectScreen = () => {
           <p>Skip Sizes Will Be Diplayed Here</p>{" "}
         </Flex>
       ) : (
-        <Flex className="skip-select-cards-wrap">
+        <Flex className="skip-select-cards-wrap fadein-body">
           {skipSelectData.map((item, idx) => (
             <SkipSelectCard
               skipSelectCardData={item}

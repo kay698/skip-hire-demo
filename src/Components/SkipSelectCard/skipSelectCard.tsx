@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex } from "../Box/box.styles";
 import { SkipSelectCardWrap } from "./skipSelectCard.styles";
 import { Button } from "../Button/button.styles";

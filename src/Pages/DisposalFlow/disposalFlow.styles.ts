@@ -15,7 +15,7 @@ export const DisposalFlowWrap = styled(Flex)`
     z-index: 1;
 
     .sub-header-text {
-      opacity: 0.8;
+      color: #ffffffa8;
     }
   }
   .skip-select-cards-wrap {
