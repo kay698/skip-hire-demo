@@ -20,7 +20,7 @@ interface FlexProps {
 export const Flex = styled.div<FlexProps>`
   display: flex;
   flex: ${({ flex }) => flex ?? ""};
-  justify-content: ${({ justifyContent = "center" }) => justifyContent};
+  justify-content: ${({ justifyContent = "flex-start" }) => justifyContent};
   align-items: ${({ alignItems = "center" }) => alignItems};
   flex-wrap: ${({ flexWrap = "wrap" }) => flexWrap};
   flex-direction: ${({ flexDir = "row" }) => flexDir};

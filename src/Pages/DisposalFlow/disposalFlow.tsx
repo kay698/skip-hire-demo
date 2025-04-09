@@ -1,19 +1,22 @@
-import React, { ReactElement, SVGProps, useState } from "react";
-import { Flex } from "../../Components/Box/box.styles";
+import React, { useState } from "react";
 import { DisposalFlowWrap } from "./disposalFlow.styles";
 import BreadCrumbs from "../../Components/BreadCrumbs/breadCrumbs";
 import { FaLocationDot } from "react-icons/fa6";
+import { RiDeleteBin6Fill, RiTruckFill } from "react-icons/ri";
+import { MdShield } from "react-icons/md";
+import { BsFillCreditCardFill } from "react-icons/bs";
+import { FaCalendar } from "react-icons/fa6";
 
 const DisposalFlow = () => {
   const [activeIndex] = useState(2);
 
   const breadCrumbsList = [
-    { label: "Postcode", icon: <FaLocationDot /> },
-    { label: "Waste Type", icon: <FaLocationDot /> },
-    { label: "Select Type", icon: <FaLocationDot /> },
-    { label: "Permit Check", icon: <FaLocationDot /> },
-    { label: "Choose Date", icon: <FaLocationDot /> },
-    { label: "Payment", icon: <FaLocationDot /> },
+    { label: "Postcode", icon: FaLocationDot },
+    { label: "Waste Type", icon: RiDeleteBin6Fill },
+    { label: "Select Type", icon: RiTruckFill },
+    { label: "Permit Check", icon: MdShield },
+    { label: "Choose Date", icon: FaCalendar },
+    { label: "Payment", icon: BsFillCreditCardFill },
   ];
 
   return (
@@ -22,4 +25,5 @@ const DisposalFlow = () => {
     </DisposalFlowWrap>
   );
 };
+
 export default DisposalFlow;

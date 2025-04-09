@@ -3,7 +3,7 @@ import DisposalFlow from "./Pages/DisposalFlow/disposalFlow";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <DisposalFlow />
     </div>
   );
