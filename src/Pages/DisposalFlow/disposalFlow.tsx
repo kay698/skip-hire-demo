@@ -6,6 +6,7 @@ import { RiDeleteBin6Fill, RiTruckFill } from "react-icons/ri";
 import { MdShield } from "react-icons/md";
 import { BsFillCreditCardFill } from "react-icons/bs";
 import { FaCalendar } from "react-icons/fa6";
+import SkipSelectScreen from "./Screens/skipSelectScreen";
 
 const DisposalFlow = () => {
   const [activeIndex] = useState(2);
@@ -22,6 +23,7 @@ const DisposalFlow = () => {
   return (
     <DisposalFlowWrap>
       <BreadCrumbs breadcrumbs={breadCrumbsList} activeIndex={activeIndex} />
+      <SkipSelectScreen />
     </DisposalFlowWrap>
   );
 };

@@ -6,6 +6,7 @@ export const BreadCrumbsWrap = styled(Flex)`
   border-radius: 0.3rem;
   background-color: #1a1d1f;
   gap: 0.8rem;
+  transition: all 0.3s ease;
 
   .completed-crumb {
     color: #ea9a209c;
