@@ -1,46 +1,79 @@
-# Getting Started with Create React App
+# 🛠️ Skip Hire Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React + TypeScript web demo for a skip hire service interface. It was built entirely from scratch based on a provided UI design link, with thoughtful improvements made to enhance usability, responsiveness, and code organization.
 
-## Available Scripts
+## 🧠 My Approach
 
-In the project directory, you can run:
+I was given a url as reference and no starter codebase. I analyzed the design, broke it down into components, and implemented the layout and logic from the ground up.
 
-### `npm start`
+The main goal was to replicate the skip selection screen and ensure a smooth, modern user experience — while making creative decisions around animations, responsiveness, and styling to elevate the final output.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. React
 
-### `npm test`
+2. TypeScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Styled Components
 
-### `npm run build`
+4. GSAP (GreenSock)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. React Icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+1. Skip Selection Interface for 4 to 12-yard skips with pricing and conditions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Responsive Layout built with Flexbox and media queries
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Animated Transitions using GSAP for smooth UI motion
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Styled Components for scoped, maintainable styling, and to also showcase my skillset in building optimized components from scratch
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+5. Axios Setup to allow easy backend integration
 
-## Learn More
+6. Reusable Components (like SkipCard) for a cleaner structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+7. Conditional Elements like "Private Property Only" badges based on road access
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Modifications & Improvements
+
+1. Used TypeScript for type safety and better development experience
+
+2. Introduced GSAP animations to bring visual life to components
+
+3. Built a responsive layout to ensure optimal display on all screen sizes
+
+4. Created a SkipCard component to handle the layout and logic for each skip
+
+5. Organized code into logical folders like components, pages, and utils
+
+6. Made changes to font-family, colors and layout sizing to improve the overall appeal
+
+7. Implemented loader state and no data state on the cards section for better functionality
+
+---
+
+```
+📁 Folder Structure
+src/
+├── assets/ # Images and visuals
+├── components/ # Reusable UI components (e.g., SkipCard, button, Loader)
+├── pages/ # Main page views
+├── utils/ # Helper functions
+├── App.tsx # Main app layout
+└── main.tsx # Entry point
+```
+
+## 🛠️ Getting Started
+
+To run the project locally:
+
+```
+git clone https://github.com/kay698/skip-hire-demo.git
+cd skip-hire-demo
+yarn
+yarn start
+```
