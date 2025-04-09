@@ -14,26 +14,31 @@ export const SkipSelectCardWrap = styled(Flex)`
   transition: all 0.3s ease;
   position: relative;
 
+  &:hover {
+    transform: scale(1.03);
+
+    .private-property-warning {
+      transform: scale(1.05);
+    }
+  }
+
   .skip-select-card-sub {
     background: linear-gradient(0deg, #000000c4, #000000c4),
       url(${CardBackground});
     height: calc(100% - 5rem);
     background-repeat: no-repeat;
-    background-position: center 30%;
+    background-position: center;
     background-size: cover;
-    transition: all 0.8s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     position: relative;
-    overflow: hidden;
-  }
-
-  .skip-select-card-sub {
     padding: 1rem;
+
     .skip-select-card-textsection {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
       height: 100%;
       position: relative;
+
       .private-property-warning {
         position: absolute;
         top: 0;
@@ -43,6 +48,7 @@ export const SkipSelectCardWrap = styled(Flex)`
         padding: 0.3rem 0.5rem;
         border-radius: 0.3rem;
         background-color: #2d2e2f;
+        transition: transform 0.3s ease 0.1s;
       }
 
       .price-per-week {
@@ -50,22 +56,13 @@ export const SkipSelectCardWrap = styled(Flex)`
       }
     }
   }
-  &:hover {
-    /* transform: translateY(-5px); */
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
-
-    .skip-select-card-sub {
-      background-position: center 70%;
-      /* transform: scale(1.05); */
-    }
-  }
 
   @media (max-width: 1050px) {
     width: calc(50% - 0.5rem);
     height: 22rem;
 
-    &:hover .skip-select-card-sub {
-      background-position: center 60%;
+    &:hover {
+      transform: translateY(-5px);
     }
   }
 `;
