@@ -2,7 +2,6 @@ import React from "react";
 import { IconType } from "react-icons";
 import { BreadCrumbsWrap } from "./breadCrumbs.styles";
 import { Flex } from "../Box/box.styles";
-import { RiArrowRightWideFill } from "react-icons/ri";
 
 interface BreadcrumbItem {
   label: string;
@@ -15,10 +14,6 @@ interface BreadcrumbsProps {
 }
 
 const BreadCrumbs = ({ breadcrumbs, activeIndex }: BreadcrumbsProps) => {
-  const ArrowIcon = RiArrowRightWideFill as React.ComponentType<{
-    className?: string;
-  }>;
-
   return (
     <BreadCrumbsWrap>
       {breadcrumbs.map((item, idx) => {

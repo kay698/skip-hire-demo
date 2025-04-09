@@ -10,7 +10,7 @@ export const BreadCrumbsWrap = styled(Flex)`
   position: fixed;
   width: calc(100% - 4rem);
   top: 2rem;
-
+  z-index: 2;
   .completed-crumb {
     color: #ea9a209c;
   }

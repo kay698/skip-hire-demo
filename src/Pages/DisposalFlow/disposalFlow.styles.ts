@@ -12,6 +12,7 @@ export const DisposalFlowWrap = styled(Flex)`
   .disposal-flow-header {
     flex-direction: column;
     margin: 2rem 0;
+    z-index: 1;
 
     .sub-header-text {
       opacity: 0.8;
@@ -19,6 +20,7 @@ export const DisposalFlowWrap = styled(Flex)`
   }
   .skip-select-cards-wrap {
     gap: 1.5rem;
+    z-index: 1;
   }
   @media (max-width: 1050px) {
     padding: 1rem;
@@ -29,6 +31,12 @@ export const DisposalFlowWrap = styled(Flex)`
 
     .disposal-flow-header {
       margin-top: 5rem;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .disposal-flow-header {
+      margin-top: 6rem;
     }
   }
 `;
