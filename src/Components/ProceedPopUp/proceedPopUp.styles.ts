@@ -31,7 +31,7 @@ export const ProceedPopupWrap = styled(Flex)<Custom>`
 
   @media (max-width: 1050px) {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 1rem;
 
     .popup-button-wrap {

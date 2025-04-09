@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Flex, Grid } from "../../../Components/Box/box.styles";
+import { Flex } from "../../../Components/Box/box.styles";
 import axios from "axios";
 import { Loader } from "../../../Components/Loader/loader";
 import SkipSelectCard from "../../../Components/SkipSelectCard/skipSelectCard";
@@ -45,7 +45,10 @@ const SkipSelectScreen = () => {
   };
   if (isLoading) <Loader />;
   return (
-    <Flex margin={isCardSelected.id ? "0 0 5rem 0" : "0"}>
+    <Flex
+      margin={isCardSelected.id ? "0 0 5rem 0" : "0"}
+      mobileMargin={isCardSelected.id ? "0 0 8rem 0" : "0"}
+    >
       <Flex className="disposal-flow-header">
         <h1 className="header-text">Choose Your Skip Size</h1>
         <p className="sub-header-text">

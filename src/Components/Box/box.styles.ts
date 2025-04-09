@@ -15,6 +15,7 @@ interface FlexProps {
   border?: string;
   opacity?: string;
   gap?: string;
+  mobileMargin?: string;
 }
 
 export const Flex = styled.div<FlexProps>`
@@ -33,18 +34,8 @@ export const Flex = styled.div<FlexProps>`
   border: ${({ border = "" }) => border};
   opacity: ${({ opacity = "1" }) => opacity};
   gap: ${({ gap = "1rem" }) => gap};
-`;
 
-interface GridProps {
-  gridCol?: string;
-  gridRow?: string;
-  gap?: string;
-}
-
-export const Grid = styled.div<GridProps>`
-  display: grid;
-  width: 100%;
-  grid-template-columns: ${({ gridCol = "1fr" }) => gridCol};
-  grid-template-rows: ${({ gridRow = "auto auto auto auto" }) => gridRow};
-  grid-gap: ${({ gap = "1rem" }) => gap};
+  @media (max-width: 1050px) {
+    margin: ${({ mobileMargin = "0" }) => mobileMargin};
+  }
 `;
