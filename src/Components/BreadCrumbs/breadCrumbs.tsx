@@ -34,7 +34,7 @@ const BreadCrumbs = ({ breadcrumbs, activeIndex }: BreadcrumbsProps) => {
               gap=".5rem"
             >
               {Icon && <Icon className="breadcrumb-icon" />}
-              <span className="breadcrumb-label">{item.label}</span>
+              <p className="breadcrumb-label">{item.label}</p>
             </Flex>
             {idx < breadcrumbs.length - 1 && "/"}
           </React.Fragment>

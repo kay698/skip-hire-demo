@@ -4,6 +4,8 @@ import axios from "axios";
 import { Loader } from "../../../Components/Loader/loader";
 import SkipSelectCard from "../../../Components/SkipSelectCard/skipSelectCard";
 import ProceedPopup from "../../../Components/ProceedPopUp/proceedPopUp";
+import NoDataImage from "../../../assets/nodata.svg";
+
 interface SkipSelectCardItem {
   allowed_on_road?: boolean;
   allows_heavy_waste?: boolean;
@@ -43,7 +45,6 @@ const SkipSelectScreen = () => {
       setIsLoading(false);
     }
   };
-  if (isLoading) <Loader />;
   return (
     <Flex
       margin={isCardSelected.id ? "0 0 5rem 0" : "0"}
@@ -56,8 +57,18 @@ const SkipSelectScreen = () => {
         </p>
       </Flex>
 
-      {skipSelectData?.length === 0 ? (
-        <Flex className="skip-select-cards-wrap">No Data</Flex>
+      {isLoading ? (
+        <Loader />
+      ) : skipSelectData?.length === 0 ? (
+        <Flex
+          className="skip-select-cards-wrap"
+          height="30rem"
+          flexDir="column"
+          justifyContent="center"
+        >
+          <img src={NoDataImage} alt="empty" />
+          <p>Skip Sizes Will Be Diplayed Here</p>{" "}
+        </Flex>
       ) : (
         <Flex className="skip-select-cards-wrap">
           {skipSelectData.map((item, idx) => (
