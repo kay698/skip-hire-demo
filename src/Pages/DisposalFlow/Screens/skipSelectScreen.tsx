@@ -3,6 +3,7 @@ import { Flex, Grid } from "../../../Components/Box/box.styles";
 import axios from "axios";
 import { Loader } from "../../../Components/Loader/loader";
 import SkipSelectCard from "../../../Components/SkipSelectCard/skipSelectCard";
+import ProceedPopup from "../../../Components/ProceedPopUp/proceedPopUp";
 interface SkipSelectCardItem {
   allowed_on_road?: boolean;
   allows_heavy_waste?: boolean;
@@ -44,7 +45,7 @@ const SkipSelectScreen = () => {
   };
   if (isLoading) <Loader />;
   return (
-    <Flex>
+    <Flex margin={isCardSelected.id ? "0 0 5rem 0" : "0"}>
       <Flex className="disposal-flow-header">
         <h1 className="header-text">Choose Your Skip Size</h1>
         <p className="sub-header-text">
@@ -66,6 +67,11 @@ const SkipSelectScreen = () => {
           ))}
         </Flex>
       )}
+
+      <ProceedPopup
+        setIsCardSelected={setIsCardSelected}
+        isCardSelected={isCardSelected}
+      />
     </Flex>
   );
 };
